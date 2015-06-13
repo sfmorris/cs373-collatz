@@ -17,6 +17,7 @@ install:
 
 before_script:
     - uname -a
+    - echo "test\n"
     - printenv
     - pip3 --version
     - pip3 freeze
