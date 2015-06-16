@@ -29,8 +29,56 @@ def collatz_eval (i, j) :
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
-    # <your code>
-    return 1
+    max_cycle_length = 0
+    cycle_length = 0
+    for k in range(i, j+1) :
+        #print("\nevaluating k: {}".format(k))
+        cycle_length = collatz_helper(k, 1)
+        #print("cycle_length is {} of type {}".format(cycle_length, type(cycle_length)))
+        #print("max_cycle_length is {} of type {}".format(max_cycle_length, type(max_cycle_length)))
+        if cycle_length > max_cycle_length:
+            max_cycle_length = cycle_length
+    return max_cycle_length
+
+# --------------
+# collatz_helper
+# --------------
+
+def collatz_helper (n, count) :
+    """
+    n the individual natural number to find cycle length for
+    count the cycle length so far, which should be 1 unless trying cute optimization tricks
+    return the cycle length for n
+    """
+    #print("calling collatz_helper({}, {})".format(n, count))
+    if n == 1:
+        #print("less than or equal 1 case")
+        return count
+    if n % 2 == 0:
+        #print("mod 2 equal 0 case")
+        return collatz_helper(n / 2, count + 1)
+    else:
+        #print("odd case")
+        return collatz_helper(3 * n + 1, count + 1)
+
+# ------------
+# collatz_iter
+# ------------
+
+def collatz_iter (n) :
+    """
+    n the individual natural number to find cycle length for
+    return the cycle length for n, found iteratively
+    """
+    count = 1
+    while (n > 1) :
+        if n % 2 == 0 :
+            n /= 2
+            count += 1
+        else :
+            n = 3 * n + 1
+            count += 1
+    return count
 
 # -------------
 # collatz_print
