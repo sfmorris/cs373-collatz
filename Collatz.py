@@ -33,7 +33,7 @@ def collatz_eval (i, j) :
     cycle_length = 0
     for k in range(i, j+1) :
         #print("\nevaluating k: {}".format(k))
-        cycle_length = collatz_helper(k, 1)
+        cycle_length = collatz_cycle_length(k)
         #print("cycle_length is {} of type {}".format(cycle_length, type(cycle_length)))
         #print("max_cycle_length is {} of type {}".format(max_cycle_length, type(max_cycle_length)))
         if cycle_length > max_cycle_length:
@@ -61,11 +61,11 @@ def collatz_helper (n, count) :
         #print("odd case")
         return collatz_helper(3 * n + 1, count + 1)
 
-# ------------
-# collatz_iter
-# ------------
+# --------------------
+# collatz_cycle_length
+# --------------------
 
-def collatz_iter (n) :
+def collatz_cycle_length (n) :
     """
     n the individual natural number to find cycle length for
     return the cycle length for n, found iteratively
