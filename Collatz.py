@@ -31,7 +31,13 @@ def collatz_eval (i, j) :
     """
     max_cycle_length = 0
     cycle_length = 0
-    for k in range(i, j+1) :
+    if j < i :
+        range_min = j
+        range_max = i
+    else :
+        range_min = i
+        range_max = j
+    for k in range(range_min, range_max+1) :
         #print("\nevaluating k: {}".format(k))
         cycle_length = collatz_cycle_length(k)
         #print("cycle_length is {} of type {}".format(cycle_length, type(cycle_length)))
