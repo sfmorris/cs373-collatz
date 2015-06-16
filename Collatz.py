@@ -40,27 +40,6 @@ def collatz_eval (i, j) :
             max_cycle_length = cycle_length
     return max_cycle_length
 
-# --------------
-# collatz_helper
-# --------------
-
-def collatz_helper (n, count) :
-    """
-    n the individual natural number to find cycle length for
-    count the cycle length so far, which should be 1 unless trying cute optimization tricks
-    return the cycle length for n
-    """
-    #print("calling collatz_helper({}, {})".format(n, count))
-    if n == 1:
-        #print("less than or equal 1 case")
-        return count
-    if n % 2 == 0:
-        #print("mod 2 equal 0 case")
-        return collatz_helper(n / 2, count + 1)
-    else:
-        #print("odd case")
-        return collatz_helper(3 * n + 1, count + 1)
-
 # --------------------
 # collatz_cycle_length
 # --------------------
