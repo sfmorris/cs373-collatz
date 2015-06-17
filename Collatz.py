@@ -29,6 +29,8 @@ def collatz_eval (i, j) :
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
+    assert i > 0
+    assert j > 0
     max_cycle_length = 0
     cycle_length = 0
     if j < i :
@@ -44,6 +46,8 @@ def collatz_eval (i, j) :
         #print("max_cycle_length is {} of type {}".format(max_cycle_length, type(max_cycle_length)))
         if cycle_length > max_cycle_length:
             max_cycle_length = cycle_length
+        assert max_cycle_length > 0
+    assert max_cycle_length > 0
     return max_cycle_length
 
 # --------------------
@@ -55,6 +59,7 @@ def collatz_cycle_length (n) :
     n the individual natural number to find cycle length for
     return the cycle length for n, found iteratively
     """
+    assert n > 0
     count = 1
     while (n > 1) :
         if n % 2 == 0 :
@@ -63,6 +68,8 @@ def collatz_cycle_length (n) :
         else :
             n = 3 * n + 1
             count += 1
+        assert count > 0
+    assert count > 0
     return count
 
 # -------------
