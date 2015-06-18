@@ -1,0 +1,107 @@
+commit e526232715f78da8cc5b258e115f5f55904cada3
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 18:48:21 2015 -0500
+
+    updated makefile tests to look for my eid-tagged files, I think this was blocking my fixes for fixes #4, fixes #7, fixes #8, fixes #10
+
+commit de9df7d57effa43685521033992e27ab709dfa6b
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 18:24:10 2015 -0500
+
+    updated documentation, now covering the collatz_cycle_length function fix #10
+
+commit 861411ed316081f1f41a04f1058e652256afc6fe
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 18:12:34 2015 -0500
+
+    added pre/post conditions and loop invariants, after reading piazza I'm not testing input other than it's 0 < x < 1000000 since python raises a ValueError already for negative numbers, the wrong number of arguments in input, noninteger input, etc. fix #4
+
+commit a76492208792afdb082e7d40b12b35e3e2a1aeab
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 18:08:47 2015 -0500
+
+    added asserts for pre and post conditions as well as some loop invariants, I'm not testing for bad input after reading piazza since python already raises a ValueError
+
+commit fca27784a4871b6836ceb8fe5298d084274ea526
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 11:51:02 2015 -0500
+
+    rolled RunCollatz.py in to Collatz.py for sphere fix #5
+
+commit 54904b4b490d9fc6d7ce84e8badfbebf2c1ad5d4
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Wed Jun 17 11:47:51 2015 -0500
+
+    added some hulked up unit testing
+
+commit 74ce2271d2da8f290d4a1aca13265b4cd07a3b64
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Tue Jun 16 14:27:24 2015 -0500
+
+    use range_min and range_max to handle minimum-first-maximum-last as well as maximum-first-minimum-last style input fix #11
+
+commit 99d20832d0a109e78e560876b24fa89276e7f2d9
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Tue Jun 16 12:59:33 2015 -0500
+
+    removing collatz_helper
+
+commit ccaeeeffd76e483421f9eda5cafca0b3d9b755f0
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Tue Jun 16 12:54:49 2015 -0500
+
+    renamed collatz_iter to collatz_cycle_length, and now call that function instead of the recursive collatz_helper
+
+commit 976da4f06c050ce365974262ac02f57f97d209ff
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Tue Jun 16 10:54:37 2015 -0500
+
+    fixing acceptance and unit tests
+
+commit 78ca0fa48708f008e38d92c57fa2c3184cbcc76b
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Tue Jun 16 10:30:17 2015 -0500
+
+    naive correct implementation of collatz_eval using collatz_helper recursively, but also a stubbed out collatz_iter which solves it iteratively
+
+commit 28c68da96349bd63e1c7964f1702ff974c996986
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 15:15:05 2015 -0500
+
+    Collatz.py should be valid python now
+
+commit dc7b4ee1ef6558f96b7dad5ac6ab8670a31d1196
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 15:07:08 2015 -0500
+
+    even more wget fixes
+
+commit 68fcd2d69effbf3bf4e5f362a8cdd79a1562393d
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 14:59:47 2015 -0500
+
+    empty change to hopefully trigger travis ci
+
+commit 24bf3ce9ccf5807261f390fba387f9753a3658d7
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 14:47:27 2015 -0500
+
+    fixing more bungled wgets
+
+commit 6967c01d6c9f5e23381cff2bbf7b1994836770bd
+Author: Samuel Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 14:44:16 2015 -0500
+
+    wget'ed the raw files, not the github pages for the individual files fix #1
+
+commit fb5b0cb0bf77889a78d1692cc170fb5a73e0182e
+Author: Samuel Morris <sfmorris@cs.utexas.edu>
+Date:   Sat Jun 13 13:25:35 2015 -0500
+
+    Initial checkin of code pulled from Downing's site. fix #1
+
+commit 1a0a9c25fe3328934cdd8fb8ca993826a36821a3
+Author: Sam Morris <sfmorris@gmail.com>
+Date:   Sat Jun 13 13:10:54 2015 -0500
+
+    Create README.md
